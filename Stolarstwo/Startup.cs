@@ -49,7 +49,7 @@ namespace Stolarstwo
                 options.Lockout.MaxFailedAccessAttempts = 5;
                 options.Lockout.AllowedForNewUsers = true;
 
-                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz0123456789";
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyz0123456789.@";
                 options.User.RequireUniqueEmail = true;
             });
 
