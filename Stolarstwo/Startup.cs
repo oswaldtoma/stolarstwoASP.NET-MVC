@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -34,7 +35,19 @@ namespace Stolarstwo
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddControllersWithViews()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+
+            var supportedCultures = new[] { "pl-PL", "en-GB" };
+            var options = new RequestLocalizationOptions()
+                    .SetDefaultCulture(supportedCultures[0])
+                    .AddSupportedCultures(supportedCultures)
+                    .AddSupportedUICultures(supportedCultures);
+
+            services.Configure<RequestLocalizationOptions>(x => x = options);
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -79,6 +92,15 @@ namespace Stolarstwo
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            var supportedCultures = new[] { "pl-PL", "en-GB", "en-US" };
+            var options = new RequestLocalizationOptions()
+                    .SetDefaultCulture(supportedCultures[0])
+                    .AddSupportedCultures(supportedCultures)
+                    .AddSupportedUICultures(supportedCultures);
+
+            app.UseRequestLocalization(options);
+
             app.UseStaticFiles();
 
             app.UseRouting();

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Stolarstwo.Models;
 using System;
@@ -11,10 +12,13 @@ namespace Stolarstwo.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IStringLocalizer<HomeController> _localizer;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IStringLocalizer<HomeController> localizer,
+            ILogger<HomeController> logger)
         {
+            _localizer = localizer;
             _logger = logger;
         }
 
