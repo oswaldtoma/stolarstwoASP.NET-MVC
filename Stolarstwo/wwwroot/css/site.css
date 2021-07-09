@@ -63,9 +63,61 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: inherit;
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+  background-color: white;
+  bottom: 0; 
+/*TODO*/
+}
+
+#wrapper {
+    position: absolute;
+    left: 0;
+    top: 6%;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#wrapper section {
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: table;
+}
+
+/*#wrapper section div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}*/
+
+#wrapper h1 {
+    position: relative;
+    margin: 5%;
+    left: 10%;
+}
+
+#welcome {
+    background: url("../images/ian-schneider-91717.jpg");
+}
+
+#welcome a {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+#offer h2 {
+    position: relative;
+    margin: 5%;
+    left: 10%;
+}
+
+#offer button {
+    position: relative;
+    margin: 5%;
+    left: 20%;
+    display: table
 }
