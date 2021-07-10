@@ -32,6 +32,11 @@ namespace Stolarstwo.Controllers
             return View();
         }
 
+        public IActionResult StandardSmooth()
+        {
+            return View("StandardSmooth");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

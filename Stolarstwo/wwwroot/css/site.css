@@ -62,8 +62,10 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
-  position: inherit;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
@@ -73,9 +75,9 @@ body {
 }
 
 #wrapper {
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 6%;
+    top: 0;
     vertical-align: middle;
     width: 100%;
 }
@@ -115,9 +117,32 @@ body {
     left: 10%;
 }
 
-#offer button {
+#offer a {
     position: relative;
     margin: 5%;
     left: 20%;
     display: table
+}
+
+#gallerycontainer {
+    position: relative;
+    left: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.imggallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+.imggallery:hover {
+    border: 1px solid #777;
+}
+
+.imggallery img {
+    width: 100%;
+    height: auto;
 }

@@ -13,6 +13,14 @@
     }
 </script>
 
+<style>
+    #mainContainer {
+        position: relative;
+        margin-top: -1%;
+        overflow-y: hidden;
+    }
+</style>
+
 <div id="wrapper">
     <section id="welcome">
         <a href="#offer" class="btn btn-outline-light btn-lg">@_localizer["Check our offer"]</a>
@@ -21,11 +29,11 @@
         <h1>@_localizer["Offer"]</h1>
         <div id="buttons">
             <h2>@_localizer["Doors:"]</h2>
-            <button class="btn btn-secondary btn-lg">@_localizer["Interior doors"]</button>
-            <button class="btn btn-secondary btn-lg">@_localizer["Exterior doors"]</button>
+            <a class="btn btn-secondary btn-lg">@_localizer["Interior doors"]</a>
+            <a class="btn btn-secondary btn-lg">@_localizer["Exterior doors"]</a>
             <h2>@_localizer["Mirrors:"]</h2>
-            <button class="btn btn-secondary btn-lg">@_localizer["Rustic"]</button>
-            <button class="btn btn-secondary btn-lg">@_localizer["Standard (smooth)"]</button>
+            <a class="btn btn-secondary btn-lg">@_localizer["Rustic"]</a>
+            <a href="/Home/StandardSmooth" class="btn btn-secondary btn-lg">@_localizer["Standard (smooth)"]</a>
         </div>
     </section>
     <section id="ourWork">
