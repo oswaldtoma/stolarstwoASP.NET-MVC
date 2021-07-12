@@ -35,6 +35,11 @@ namespace Stolarstwo.Controllers
             return View();
         }
 
+        public IActionResult FormSubmit(FormModel model)
+        {
+            return View();
+        }
+
         public IActionResult Gallery(string type)
         { 
             GalleryModel model = new(_webHostEnvironment);

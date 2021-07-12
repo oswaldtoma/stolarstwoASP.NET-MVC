@@ -1,4 +1,6 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@model Stolarstwo.Models.FormModel
+
+@using Microsoft.AspNetCore.Mvc.Localization
 
 @inject IViewLocalizer _localizer
 
@@ -36,14 +38,76 @@
             <a href="/Home/Gallery?type=standardsmooth" class="btn btn-secondary btn-lg">@_localizer["Standard (smooth)"]</a>
         </div>
     </section>
-    <section id="ourWork">
-        <h1>@_localizer["Our work"]</h1>
-    </section>
     <section id="contact">
         <h1>@_localizer["Contact"]</h1>
+        <div id="contactdata">
+            <table id="contacttable">
+                <tr><td><h2>@_localizer["Phone number"]:</h2></td></tr>
+                <tr><td><h3>555-444-333</h3></td></tr>
+                <tr><td><h2>@_localizer["Email"]:</h2></td></tr>
+                <tr><td><h3>stolarstwo@stolarstwo.pl</h3></td></tr>
+                <tr><td><h2>@_localizer["Address"]:</h2></td></tr>
+                <tr><td><h3>ul. Warszawska 21</h3></td></tr>
+                <tr><td><h3>37-148 Kluczbork</h3></td></tr>
+                <tr><td><h3>woj. małopolskie</h3></td></tr>
+            </table>
+        </div>
     </section>
     <section id="order">
         <h1>@_localizer["Order"]</h1>
+        <form id="orderform" asp-action="FormSubmit">
+            <input type="text" placeholder="@_localizer["Height (cm)"]" />
+            <input type="text" placeholder="@_localizer["Width (cm)"]" /><br />
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" name="transparent" />
+                        <label for="transparent">@_localizer["Transparent"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="white" />
+                        <label for="white">@_localizer["White"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="oilwax" />
+                        <label for="oilwax">@_localizer["Oilwax"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="oak" />
+                        <label for="oak">@_localizer["Oak"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="bright_oak" />
+                        <label for="bright_oak">@_localizer["Bright Oak"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="teak" />
+                        <label for="teak">@_localizer["Teak"]</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="palisander" />
+                        <label for="palisander">@_localizer["Palisander"]</label>
+                    </td>
+                </tr>
+            </table>
+            <select data-val="true" data-val-required="@_localizer["The frame width field is required"]">
+                <option value="0">6 cm</option>
+                <option value="1">8 cm</option>
+            </select>
+            <button class="btn btn-secondary" type="submit">@_localizer["Order"]</button>
+        </form>
     </section>
     <section id="map">
         <h1>@_localizer["Map"]</h1>

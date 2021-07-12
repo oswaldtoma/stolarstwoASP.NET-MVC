@@ -146,3 +146,30 @@ body {
     width: 100%;
     height: auto;
 }
+
+#contactdata{
+    position: relative;
+    margin: 5%;
+    left: 20%;
+    display: table
+}
+
+#contactdata h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#contactdata h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#links {
+    position: relative;
+    left: 25%;
+}
+
+#orderform {
+    position: relative;
+    margin: 5%;
+    left: 20%;
+    display: table
+}
