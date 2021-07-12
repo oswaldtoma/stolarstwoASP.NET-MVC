@@ -55,6 +55,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>RegisterConfirmation.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\Controllers\HomeController.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>HomeController.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Views\Home\Index.en.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -128,6 +133,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RegisterConfirmation.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Controllers\HomeController.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeController.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Views\Home\Index.en.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Index.en.Designer.cs</LastGenOutput>
@@ -152,7 +161,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\doors\interiordoors\" />
     <Folder Include="wwwroot\images\doors\exteriordoors\" />
-    <Folder Include="wwwroot\images\mirrors\standardsmooth\" />
     <Folder Include="wwwroot\images\mirrors\rustic\" />
   </ItemGroup>
 

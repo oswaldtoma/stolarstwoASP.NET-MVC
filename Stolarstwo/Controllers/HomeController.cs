@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
 using Stolarstwo.Models;
@@ -14,12 +15,14 @@ namespace Stolarstwo.Controllers
     {
         private readonly IStringLocalizer<HomeController> _localizer;
         private readonly ILogger<HomeController> _logger;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         public HomeController(IStringLocalizer<HomeController> localizer,
-            ILogger<HomeController> logger)
+            ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment)
         {
             _localizer = localizer;
             _logger = logger;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -32,9 +35,32 @@ namespace Stolarstwo.Controllers
             return View();
         }
 
-        public IActionResult StandardSmooth()
-        {
-            return View("StandardSmooth");
+        public IActionResult Gallery(string type)
+        { 
+            GalleryModel model = new(_webHostEnvironment);
+
+            if (type == "interiordoors")
+            {
+                model.GalleryImagesPath = "doors\\interiordoors";
+                model.Title = _localizer["Interior Doors"];
+            }
+            if (type == "exteriordoors")
+            {
+                model.GalleryImagesPath = "doors\\exteriordoors";
+                model.Title = _localizer["Exterior Doors"];
+            }
+            if (type == "rustic")
+            {
+                model.GalleryImagesPath = "mirrors\\rustic";
+                model.Title = _localizer["Rustic"];
+            }
+            if (type == "standardsmooth")
+            {
+                model.GalleryImagesPath = "mirrors\\standardsmooth";
+                model.Title = _localizer["Standard (smooth)"];
+            }
+
+            return View("Gallery", model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

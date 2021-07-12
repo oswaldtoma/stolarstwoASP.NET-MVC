@@ -113,6 +113,9 @@ namespace Stolarstwo
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "gallery",
+                    pattern: "{controller=Home}/{action=Gallery}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

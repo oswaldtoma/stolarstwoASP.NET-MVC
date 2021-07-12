@@ -1,0 +1,22 @@
+﻿@model Stolarstwo.Models.GalleryModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = Model.Title;
+    string[] images = Model.GetImages(Model.GalleryImagesPath);
+}
+
+<div id="gallerycontainer">
+    @for (int i = 0; i < images.Length; i++)
+    {
+        var filePath = @images[i].Substring(images[i].IndexOf("images"), images[i].Length - images[i].IndexOf("images"));
+        filePath = filePath.Replace("\\", "/");
+
+        <div class="imggallery">
+            <a target="_blank" href="~/@filePath">
+                <img src="~/@filePath" alt="Cinque Terre" width="600" height="400">
+            </a>
+        </div>
+    }
+</div>
