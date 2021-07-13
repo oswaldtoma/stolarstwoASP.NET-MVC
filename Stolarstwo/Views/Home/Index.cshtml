@@ -55,56 +55,86 @@
     </section>
     <section id="order">
         <h1>@_localizer["Order"]</h1>
-        <form id="orderform" asp-action="FormSubmit">
-            <input type="text" placeholder="@_localizer["Height (cm)"]" />
-            <input type="text" placeholder="@_localizer["Width (cm)"]" /><br />
+        <form id="orderform" method="post" asp-controller="Home" asp-action="FormSubmit">
+            <div class="mirrorselector">
+                <input id="rustic" type="radio" asp-for="@Model.MirrorType" value="0" />
+                <label class="mirrorchoice rustic" for="rustic"></label>
+                <input id="standardsmooth" type="radio" asp-for="@Model.MirrorType" value="1" />
+                <label class="mirrorchoice standardsmooth" for="standardsmooth"></label>
+            </div>
+            <span asp-validation-for="@Model.MirrorType" class="text-danger"></span>
+
+            <input asp-for="@Model.Height" class="border-info form-control-lg" type="text" placeholder="@_localizer["Height (cm)"]" />
+            <input asp-for="@Model.Width" class="border-info form-control-lg" type="text" placeholder="@_localizer["Width (cm)"]" /><br />
+            <span asp-validation-for="@Model.Width" class="text-danger"></span>
+            <span asp-validation-for="@Model.Height" class="text-danger"></span><br />
+
             <table>
                 <tr>
                     <td>
-                        <input type="radio" name="transparent" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="0" checked />
                         <label for="transparent">@_localizer["Transparent"]</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="white" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="1" />
                         <label for="white">@_localizer["White"]</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="oilwax" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="2" />
                         <label for="oilwax">@_localizer["Oilwax"]</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="oak" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="3" />
                         <label for="oak">@_localizer["Oak"]</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="bright_oak" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="4" />
                         <label for="bright_oak">@_localizer["Bright Oak"]</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="teak" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="5" />
                         <label for="teak">@_localizer["Teak"]</label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="palisander" />
+                        <input asp-for="@Model.ColorChoice" type="radio" value="6" />
                         <label for="palisander">@_localizer["Palisander"]</label>
                     </td>
                 </tr>
             </table>
-            <select data-val="true" data-val-required="@_localizer["The frame width field is required"]">
+            <select class="mr-2 form-control-lg" asp-for="@Model.FrameWidth" data-val="true" data-val-required="@_localizer["The frame width field is required"]">
                 <option value="0">6 cm</option>
                 <option value="1">8 cm</option>
+            </select>
+            <h4>@_localizer["Shipment info"]:</h4>
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.FirstName" placeholder="@_localizer["First name"]" />
+            <span asp-validation-for="@Model.FirstName" class="text-danger"></span><br />
+            <input class="border-info form-control-lg"type="text" asp-for="@Model.LastName" placeholder="@_localizer["Last name"]" />
+            <span asp-validation-for="@Model.LastName" class="text-danger"></span><br />
+            <input class="border-info form-control-lg"type="text" asp-for="@Model.StreetAndNumber" placeholder="@_localizer["Street and number"]" />
+            <span asp-validation-for="@Model.StreetAndNumber" class="text-danger"></span><br />
+            <input class="border-info form-control-lg"type="text" asp-for="@Model.PostalCode" placeholder="@_localizer["Postal code"]" />
+            <span asp-validation-for="@Model.PostalCode" class="text-danger"></span><br />
+            <input class="border-info form-control-lg"type="text" asp-for="@Model.City" placeholder="@_localizer["City"]" />
+            <span asp-validation-for="@Model.City" class="text-danger"></span><br />
+            <input class="border-info form-control-lg"type="text" asp-for="@Model.PhoneNumber" placeholder="@_localizer["Phone number"]" />
+            <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span><br />
+            <input class="border-info form-control-lg"type="text" asp-for="@Model.EmailAddress" placeholder="@_localizer["Email Address"]" />
+            <span asp-validation-for="@Model.EmailAddress" class="text-danger"></span><br />
+            <select class="mr-2 form-control-lg" asp-for="@Model.ShipmentType" data-val="true" data-val-required="@_localizer["The shipment type field is required"]">
+                <option value="0">@_localizer["Prepaid"] 30 zł</option>
+                <option value="1">@_localizer["On delivery"] 40 zł</option>
             </select>
             <button class="btn btn-secondary" type="submit">@_localizer["Order"]</button>
         </form>

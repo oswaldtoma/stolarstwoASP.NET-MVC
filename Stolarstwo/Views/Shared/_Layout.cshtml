@@ -54,8 +54,11 @@
         <div class="container">
             &copy; 2021 - Stolarstwo - <a asp-area="" asp-controller="Home" asp-action="Privacy">@_localizer["Privacy"]</a>
             <partial name="_LoginPartial" />
-        </div></footer>
+        </div>
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

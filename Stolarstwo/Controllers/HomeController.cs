@@ -35,9 +35,12 @@ namespace Stolarstwo.Controllers
             return View();
         }
 
+        [HttpPost]
         public IActionResult FormSubmit(FormModel model)
         {
-            return View();
+            var valid = !ModelState.IsValid;
+
+            return View("Index", model);
         }
 
         public IActionResult Gallery(string type)
