@@ -8,5 +8,6 @@ namespace Stolarstwo.Models
     public class ManageModel
     {
         public List<FormModel> FormModels { get; set; } = new();
+        public bool EmailNotifications { get; set; }
     }
 }

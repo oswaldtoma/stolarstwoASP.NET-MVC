@@ -11,18 +11,20 @@ namespace Stolarstwo.Controllers
 {
     public class ManageController : Controller
     {
-        private readonly MyDbContext _dbContext;
+        private readonly MyDbContext _myDbContext;
         public List<FormModel> Orders { get; set; }
+
+        public ManageController(MyDbContext context)
+        {
+            _myDbContext = context;
+        }
 
         public IActionResult Manage()
         {
-            //Orders = _dbContext.formModels.ToList();
+            Orders = _myDbContext.FormModels.ToList();
 
             var manageModel = new ManageModel();
-            manageModel.FormModels.Add(new FormModel()
-            {
-                City = "Krakow"
-            });
+            manageModel.FormModels = Orders;
 
             return View(manageModel);
         }

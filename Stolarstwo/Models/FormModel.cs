@@ -3,7 +3,6 @@ using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Stolarstwo.Models
@@ -13,35 +12,49 @@ namespace Stolarstwo.Models
 
         public enum MirrorTypeEnum
         {
+            [Display(Name = "Rustic")]
             RUSTIC,
+            [Display(Name = "Standard (smooth)")]
             STANDARD_SMOOTH,
         }
 
         public enum FrameWidthEnum
         {
+            [Display(Name = "6 cm")]
             FW_6CM,
+            [Display(Name = "8 cm")]
             FW_8CM,
         }
 
         public enum ColorChoiceEnum
         {
+            [Display(Name = "Transparent")]
             TRANSPARENT,
+            [Display(Name = "White")]
             WHITE,
-            OILWAX,
+            [Display(Name = "Wax oil")]
+            WAX_OIL,
+            [Display(Name = "Oak")]
             OAK,
+            [Display(Name = "Bright oak")]
             BRIGHT_OAK,
+            [Display(Name = "Teak")]
             TEAK,
+            [Display(Name = "Palisander")]
             PALISANDER
         }
 
         public enum ShipmentTypeEnum
         {
+            [Display(Name = "Prepaid")]
             PREPAID,
+            [Display(Name = "On delivery")]
             ON_DELIVERY,
         }
 
         private readonly decimal rusticCostPerMeterSquared = 700;
         private readonly decimal standardSmoothCostPerMeterSquared = 580;
+        public int FormModelId { get; set; }
         [BindProperty]
         [Required]
         public MirrorTypeEnum MirrorType { get; set; }
@@ -108,7 +121,7 @@ namespace Stolarstwo.Models
                     break;
             }
 
-            return (Height * Width / 10000) * costPerMeterSquared;
+            return (Height * Width) * costPerMeterSquared / 1000;
         }
     }
 }

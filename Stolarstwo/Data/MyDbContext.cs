@@ -14,6 +14,6 @@ namespace Stolarstwo.Data
 
         }
 
-        public DbSet<FormModel> formModels { get; set; }
+        public DbSet<FormModel> FormModels { get; set; }
     }
 }

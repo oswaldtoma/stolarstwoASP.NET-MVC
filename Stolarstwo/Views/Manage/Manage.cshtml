@@ -8,6 +8,16 @@
     ViewData["Title"] = _localizer["Manage orders"];
 }
 
+<input type="checkbox" class="btn orderstable" asp-for="@Model.EmailNotifications"/>
+<label class="orderstable" asp-for="@Model.EmailNotifications">@_localizer["Send me email notifications"]</label>
+<br />
+
+@if (!Model.FormModels.Any())
+{
+    <center><h1>@_localizer["No orders found!"]</h1></center>
+}
+else
+{
 <table cellpadding="5" class="orderstable table-responsive table-hover table-bordered text-center">
     <tr>
         <th>@_localizer["Mirror type"]</th>
@@ -29,11 +39,11 @@
     {
         FormModel order = Model.FormModels[i];
         <tr>
-            <td>@order.MirrorType</td>
+            <td>@order.MirrorType.GetDisplayName()</td>
             <td>@order.Height</td>
             <td>@order.Width</td>
-            <td>@order.FrameWidth</td>
-            <td>@order.ColorChoice</td>
+            <td>@order.FrameWidth.GetDisplayName()</td>
+            <td>@order.ColorChoice.GetDisplayName()</td>
             <td>@order.FirstName</td>
             <td>@order.LastName</td>
             <td>@order.StreetAndNumber</td>
@@ -41,8 +51,9 @@
             <td>@order.City</td>
             <td>@order.PhoneNumber</td>
             <td>@order.EmailAddress</td>
-            <td>@order.ShipmentType</td>
-            <td>@order.GetCalculatedPricePLN()</td>
+            <td>@order.ShipmentType.GetDisplayName()</td>
+            <td>@order.GetCalculatedPricePLN() zł</td>
         </tr>
     }
 </table>
+}

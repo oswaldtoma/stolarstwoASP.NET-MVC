@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
+using Stolarstwo.Data;
 using Stolarstwo.Models;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,15 @@ namespace Stolarstwo.Controllers
         private readonly IStringLocalizer<HomeController> _localizer;
         private readonly ILogger<HomeController> _logger;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly MyDbContext _myDbContext;
 
         public HomeController(IStringLocalizer<HomeController> localizer,
-            ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment)
+            ILogger<HomeController> logger, IWebHostEnvironment webHostEnvironment, MyDbContext context)
         {
             _localizer = localizer;
             _logger = logger;
             _webHostEnvironment = webHostEnvironment;
+            _myDbContext = context;
         }
 
         public IActionResult Index()
@@ -38,9 +41,17 @@ namespace Stolarstwo.Controllers
         [HttpPost]
         public IActionResult FormSubmit(FormModel model)
         {
-            var valid = !ModelState.IsValid;
+            _myDbContext.FormModels.Add(model);
+            try
+            {
+                _myDbContext.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return View("FormSubmit", new FormSubmitModel().Status = _localizer["Order failed!"]);
+            }
 
-            return View("Index", model);
+            return View("FormSubmit", new FormSubmitModel().Status = _localizer["Order sent successfully!"]);
         }
 
         public IActionResult Gallery(string type)
