@@ -1,0 +1,48 @@
+﻿@model Stolarstwo.Models.ManageModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer _localizer
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = _localizer["Manage orders"];
+}
+
+<table cellpadding="5" class="orderstable table-responsive table-hover table-bordered text-center">
+    <tr>
+        <th>@_localizer["Mirror type"]</th>
+        <th>@_localizer["Height"]</th>
+        <th>@_localizer["Width"]</th>
+        <th>@_localizer["Frame width"]</th>
+        <th>@_localizer["Color choice"]</th>
+        <th>@_localizer["First name"]</th>
+        <th>@_localizer["Last name"]</th>
+        <th>@_localizer["Street and number"]</th>
+        <th>@_localizer["Postal code"]</th>
+        <th>@_localizer["City"]</th>
+        <th>@_localizer["Phone number"]</th>
+        <th>@_localizer["Email address"]</th>
+        <th>@_localizer["Shipment type"]</th>
+        <th>@_localizer["Calculated price"]</th>
+    </tr>
+    @for (int i = 0; i < Model.FormModels.Count; i++)
+    {
+        FormModel order = Model.FormModels[i];
+        <tr>
+            <td>@order.MirrorType</td>
+            <td>@order.Height</td>
+            <td>@order.Width</td>
+            <td>@order.FrameWidth</td>
+            <td>@order.ColorChoice</td>
+            <td>@order.FirstName</td>
+            <td>@order.LastName</td>
+            <td>@order.StreetAndNumber</td>
+            <td>@order.PostalCode</td>
+            <td>@order.City</td>
+            <td>@order.PhoneNumber</td>
+            <td>@order.EmailAddress</td>
+            <td>@order.ShipmentType</td>
+            <td>@order.GetCalculatedPricePLN()</td>
+        </tr>
+    }
+</table>
