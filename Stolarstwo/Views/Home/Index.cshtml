@@ -10,10 +10,19 @@
 }
 
 <script type='text/javascript'>
-    function scrollToElement(id) {
-        var target = document.getElementById(id).offsetTop + 50;
-        window.scrollTo(0, target);
-    }
+    jQuery(document).ready(function () {
+        jQuery('.scroll').click(function (e) {
+            e.preventDefault();
+            scrollToElement(jQuery(this).attr('href'), 2000);
+        });
+
+        var scrollToElement = function (el, ms) {
+            var speed = (ms) ? ms : 600;
+            jQuery('html,body').animate({
+                scrollTop: jQuery(el).offset().top
+            }, speed);
+        }
+    });
 </script>
 
 <style>
@@ -43,7 +52,7 @@
 }*@
 
     <section id="welcome">
-        <a href="#offer" class="btn btn-outline-light btn-lg">@_localizer["Check our offer"]</a>
+        <a href="#offer" class="scroll btn btn-outline-light btn-lg">@_localizer["Check our offer"]</a>
     </section>
     <section id="offer">
         <h1>@_localizer["Offer"]</h1>
