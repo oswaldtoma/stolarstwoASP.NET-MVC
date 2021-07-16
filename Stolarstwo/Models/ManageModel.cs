@@ -8,7 +8,6 @@ namespace Stolarstwo.Models
 {
     public class ManageModel
     {
-        private readonly ConfigManager _configManager = new();
 
         public List<FormModel> FormModels { get; set; } = new();
 

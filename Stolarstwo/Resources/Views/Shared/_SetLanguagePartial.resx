@@ -117,19 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Contact" xml:space="preserve">
-    <value>Kontakt</value>
+  <data name="English" xml:space="preserve">
+    <value>Angielski</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Strona główna</value>
+  <data name="Language" xml:space="preserve">
+    <value>Język</value>
   </data>
-  <data name="Offer" xml:space="preserve">
-    <value>Oferta</value>
-  </data>
-  <data name="Order" xml:space="preserve">
-    <value>Zamów</value>
-  </data>
-  <data name="Privacy" xml:space="preserve">
-    <value>Prywatność</value>
+  <data name="Polish" xml:space="preserve">
+    <value>Polski</value>
   </data>
 </root>

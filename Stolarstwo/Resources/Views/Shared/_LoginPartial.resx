@@ -126,4 +126,10 @@
   <data name="Logout" xml:space="preserve">
     <value>Wyloguj</value>
   </data>
+  <data name="Manage orders" xml:space="preserve">
+    <value>Zamówienia</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Zarejestruj się</value>
+  </data>
 </root>

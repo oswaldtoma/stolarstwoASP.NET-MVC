@@ -61,11 +61,344 @@ namespace Stolarstwo.Resources.Views.Home {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Adres.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Jasny dąb.
+        /// </summary>
+        public static string Bright_Oak {
+            get {
+                return ResourceManager.GetString("Bright Oak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Sprawdź ofertę.
+        /// </summary>
+        public static string Check_our_offer {
+            get {
+                return ResourceManager.GetString("Check our offer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Miejscowość.
+        /// </summary>
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Kontakt.
+        /// </summary>
+        public static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Drzwi:.
+        /// </summary>
+        public static string Doors_ {
+            get {
+                return ResourceManager.GetString("Doors:", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Adres e-mail.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Adres e-mail.
+        /// </summary>
+        public static string Email_Address {
+            get {
+                return ResourceManager.GetString("Email Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Angielski.
+        /// </summary>
+        public static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Drzwi zewnętrzne.
+        /// </summary>
+        public static string Exterior_doors {
+            get {
+                return ResourceManager.GetString("Exterior doors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Imię.
+        /// </summary>
+        public static string First_name {
+            get {
+                return ResourceManager.GetString("First name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wysokość (cm).
+        /// </summary>
+        public static string Height__cm_ {
+            get {
+                return ResourceManager.GetString("Height (cm)", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Drzwi wewnętrzne.
+        /// </summary>
+        public static string Interior_doors {
+            get {
+                return ResourceManager.GetString("Interior doors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Język.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwisko.
+        /// </summary>
+        public static string Last_name {
+            get {
+                return ResourceManager.GetString("Last name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Strona główna.
         /// </summary>
-        public static string Title {
+        public static string Main_page {
             get {
-                return ResourceManager.GetString("Title", resourceCulture);
+                return ResourceManager.GetString("Main page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Mapa.
+        /// </summary>
+        public static string Map {
+            get {
+                return ResourceManager.GetString("Map", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Lustra:.
+        /// </summary>
+        public static string Mirrors_ {
+            get {
+                return ResourceManager.GetString("Mirrors:", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dąb.
+        /// </summary>
+        public static string Oak {
+            get {
+                return ResourceManager.GetString("Oak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Oferta.
+        /// </summary>
+        public static string Offer {
+            get {
+                return ResourceManager.GetString("Offer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Za pobraniem.
+        /// </summary>
+        public static string On_delivery {
+            get {
+                return ResourceManager.GetString("On delivery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zamów.
+        /// </summary>
+        public static string Order {
+            get {
+                return ResourceManager.GetString("Order", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Palisander.
+        /// </summary>
+        public static string Palisander {
+            get {
+                return ResourceManager.GetString("Palisander", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nr telefonu.
+        /// </summary>
+        public static string Phone_number {
+            get {
+                return ResourceManager.GetString("Phone number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Polski.
+        /// </summary>
+        public static string Polish {
+            get {
+                return ResourceManager.GetString("Polish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Kot pocztowy.
+        /// </summary>
+        public static string Postal_code {
+            get {
+                return ResourceManager.GetString("Postal code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Przedpłata.
+        /// </summary>
+        public static string Prepaid {
+            get {
+                return ResourceManager.GetString("Prepaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Rustykalne.
+        /// </summary>
+        public static string Rustic {
+            get {
+                return ResourceManager.GetString("Rustic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dane do wysyłki.
+        /// </summary>
+        public static string Shipment_info {
+            get {
+                return ResourceManager.GetString("Shipment info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Standardowe (gładkie).
+        /// </summary>
+        public static string Standard__smooth_ {
+            get {
+                return ResourceManager.GetString("Standard (smooth)", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ulica i numer.
+        /// </summary>
+        public static string Street_and_number {
+            get {
+                return ResourceManager.GetString("Street and number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Teak.
+        /// </summary>
+        public static string Teak {
+            get {
+                return ResourceManager.GetString("Teak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Pole Szerokość Ramy jest wymagane.
+        /// </summary>
+        public static string The_frame_width_field_is_required {
+            get {
+                return ResourceManager.GetString("The frame width field is required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Pole Rodzaj przesyłki jest wymagane.
+        /// </summary>
+        public static string The_shipment_type_field_is_required {
+            get {
+                return ResourceManager.GetString("The shipment type field is required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Bezbarwny.
+        /// </summary>
+        public static string Transparent {
+            get {
+                return ResourceManager.GetString("Transparent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Olejowosk.
+        /// </summary>
+        public static string Wax_oil {
+            get {
+                return ResourceManager.GetString("Wax oil", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Biały.
+        /// </summary>
+        public static string White {
+            get {
+                return ResourceManager.GetString("White", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Szerokość (cm).
+        /// </summary>
+        public static string Width__cm_ {
+            get {
+                return ResourceManager.GetString("Width (cm)", resourceCulture);
             }
         }
     }

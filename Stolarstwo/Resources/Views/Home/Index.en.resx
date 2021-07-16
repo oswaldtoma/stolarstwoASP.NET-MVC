@@ -117,7 +117,118 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Title" xml:space="preserve">
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Bright Oak" xml:space="preserve">
+    <value>Bright Oak</value>
+  </data>
+  <data name="Check our offer" xml:space="preserve">
+    <value>Check our offer</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Doors:" xml:space="preserve">
+    <value>Doors:</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Email Address" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Exterior doors" xml:space="preserve">
+    <value>Exterior doors</value>
+  </data>
+  <data name="First name" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="Height (cm)" xml:space="preserve">
+    <value>Height (cm)</value>
+  </data>
+  <data name="Interior doors" xml:space="preserve">
+    <value>Interior doors</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Last name" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Main page" xml:space="preserve">
     <value>Main page</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="Mirrors:" xml:space="preserve">
+    <value>Mirrors:</value>
+  </data>
+  <data name="Oak" xml:space="preserve">
+    <value>Oak</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>Offer</value>
+  </data>
+  <data name="On delivery" xml:space="preserve">
+    <value>On delivery</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="Palisander" xml:space="preserve">
+    <value>Palisander</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="Polish" xml:space="preserve">
+    <value>Polish</value>
+  </data>
+  <data name="Postal code" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="Prepaid" xml:space="preserve">
+    <value>Prepaid</value>
+  </data>
+  <data name="Rustic" xml:space="preserve">
+    <value>Rustic</value>
+  </data>
+  <data name="Shipment info" xml:space="preserve">
+    <value>Shipment info</value>
+  </data>
+  <data name="Standard (smooth)" xml:space="preserve">
+    <value>Standard (smooth)</value>
+  </data>
+  <data name="Street and number" xml:space="preserve">
+    <value>Street and number</value>
+  </data>
+  <data name="Teak" xml:space="preserve">
+    <value>Teak</value>
+  </data>
+  <data name="The frame width field is required" xml:space="preserve">
+    <value>The frame width field is required</value>
+  </data>
+  <data name="The shipment type field is required" xml:space="preserve">
+    <value>The shipment type field is required</value>
+  </data>
+  <data name="Transparent" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="Wax oil" xml:space="preserve">
+    <value>Wax oil</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="Width (cm)" xml:space="preserve">
+    <value>Width (cm)</value>
   </data>
 </root>

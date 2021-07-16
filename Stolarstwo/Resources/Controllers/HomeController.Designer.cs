@@ -79,6 +79,24 @@ namespace Stolarstwo.Resources.Controllers {
         }
         
         /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zamówienie nieudane!.
+        /// </summary>
+        public static string Order_failed_ {
+            get {
+                return ResourceManager.GetString("Order failed!", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zamówienie wysłane pomyślnie!.
+        /// </summary>
+        public static string Order_sent_successfully_ {
+            get {
+                return ResourceManager.GetString("Order sent successfully!", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu Rustykalne.
         /// </summary>
         public static string Rustic {

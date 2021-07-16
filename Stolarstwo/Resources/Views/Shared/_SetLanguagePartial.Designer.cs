@@ -22,14 +22,14 @@ namespace Stolarstwo.Resources.Views.Shared {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class _LoginPartial {
+    public class _SetLanguagePartial {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal _LoginPartial() {
+        internal _SetLanguagePartial() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Stolarstwo.Resources.Views.Shared {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Stolarstwo.Resources.Views.Shared._LoginPartial", typeof(_LoginPartial).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Stolarstwo.Resources.Views.Shared._SetLanguagePartial", typeof(_SetLanguagePartial).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,29 @@ namespace Stolarstwo.Resources.Views.Shared {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Witaj.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Angielski.
         /// </summary>
-        public static string Hello {
+        public static string English {
             get {
-                return ResourceManager.GetString("Hello", resourceCulture);
+                return ResourceManager.GetString("English", resourceCulture);
             }
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zaloguj.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Język.
         /// </summary>
-        public static string Login {
+        public static string Language {
             get {
-                return ResourceManager.GetString("Login", resourceCulture);
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Wyloguj.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Polski.
         /// </summary>
-        public static string Logout {
+        public static string Polish {
             get {
-                return ResourceManager.GetString("Logout", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zamówienia.
-        /// </summary>
-        public static string Manage_orders {
-            get {
-                return ResourceManager.GetString("Manage orders", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zarejestruj się.
-        /// </summary>
-        public static string Register {
-            get {
-                return ResourceManager.GetString("Register", resourceCulture);
+                return ResourceManager.GetString("Polish", resourceCulture);
             }
         }
     }

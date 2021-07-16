@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Stolarstwo.Data;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -45,11 +46,14 @@ namespace Stolarstwo
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
 
-            var supportedCultures = new[] { "pl-PL", "en-GB" };
-            var options = new RequestLocalizationOptions()
-                    .SetDefaultCulture(supportedCultures[0])
-                    .AddSupportedCultures(supportedCultures)
-                    .AddSupportedUICultures(supportedCultures);
+            var supportedCultures = new[] {
+                new CultureInfo("pl-PL"),
+                new CultureInfo("en-US")
+            };
+            var options = new RequestLocalizationOptions();
+            options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(culture: "pl-PL", uiCulture: "pl-PL");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
 
             services.Configure<RequestLocalizationOptions>(x => x = options);
 
@@ -97,11 +101,14 @@ namespace Stolarstwo
             }
             app.UseHttpsRedirection();
 
-            var supportedCultures = new[] { "pl-PL", "en-GB", "en-US" };
-            var options = new RequestLocalizationOptions()
-                    .SetDefaultCulture(supportedCultures[0])
-                    .AddSupportedCultures(supportedCultures)
-                    .AddSupportedUICultures(supportedCultures);
+            var supportedCultures = new[] {
+                new CultureInfo("pl-PL"),
+                new CultureInfo("en-US")
+            };
+            var options = new RequestLocalizationOptions();
+            options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture(culture: "pl-PL", uiCulture: "pl-PL");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
 
             app.UseRequestLocalization(options);
 

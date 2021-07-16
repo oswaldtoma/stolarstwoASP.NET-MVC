@@ -123,6 +123,12 @@
   <data name="Interior Doors" xml:space="preserve">
     <value>Drzwi wewnętrzne</value>
   </data>
+  <data name="Order failed!" xml:space="preserve">
+    <value>Zamówienie nieudane!</value>
+  </data>
+  <data name="Order sent successfully!" xml:space="preserve">
+    <value>Zamówienie wysłane pomyślnie!</value>
+  </data>
   <data name="Rustic" xml:space="preserve">
     <value>Rustykalne</value>
   </data>

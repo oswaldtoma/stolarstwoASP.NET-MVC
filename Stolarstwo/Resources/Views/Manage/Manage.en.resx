@@ -117,19 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Contact" xml:space="preserve">
-    <value>Kontakt</value>
+  <data name="Calculated price" xml:space="preserve">
+    <value>Calculated price</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Strona główna</value>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
   </data>
-  <data name="Offer" xml:space="preserve">
-    <value>Oferta</value>
+  <data name="Color choice" xml:space="preserve">
+    <value>Color choice</value>
   </data>
-  <data name="Order" xml:space="preserve">
-    <value>Zamów</value>
+  <data name="Destination email" xml:space="preserve">
+    <value>Destination email</value>
   </data>
-  <data name="Privacy" xml:space="preserve">
-    <value>Prywatność</value>
+  <data name="Email address" xml:space="preserve">
+    <value>Email address</value>
+  </data>
+  <data name="First name" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="Frame width" xml:space="preserve">
+    <value>Frame width</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="Last name" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Mirror type" xml:space="preserve">
+    <value>Mirror type</value>
+  </data>
+  <data name="No orders found!" xml:space="preserve">
+    <value>No orders found!</value>
+  </data>
+  <data name="Phone number" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="Postal code" xml:space="preserve">
+    <value>Postal code</value>
+  </data>
+  <data name="Save settings" xml:space="preserve">
+    <value>Save settings</value>
+  </data>
+  <data name="Send me email notifications" xml:space="preserve">
+    <value>Send me email notifications</value>
+  </data>
+  <data name="Shipment type" xml:space="preserve">
+    <value>Shipment type</value>
+  </data>
+  <data name="Street and number" xml:space="preserve">
+    <value>Street and number</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>Width</value>
   </data>
 </root>

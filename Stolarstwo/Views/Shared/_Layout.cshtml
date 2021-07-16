@@ -59,7 +59,8 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2021 - Stolarstwo - <a asp-area="" asp-controller="Home" asp-action="Privacy">@_localizer["Privacy"]</a>
-            <partial name="_LoginPartial" />
+            <form asp-controller="Home" asp-action="SetLanguage" method="post"></form>
+            <partial name="_SetLanguagePartial" /><partial name="_LoginPartial" />
         </div>
     </footer>
 </body>

@@ -2,10 +2,11 @@
 
 @using Microsoft.AspNetCore.Mvc.Localization
 
+@inject IJsonHelper Json;  
 @inject IViewLocalizer _localizer
 
 @{
-    ViewData["Title"] = _localizer["Title"];
+    ViewData["Title"] = _localizer["Main page"];
 }
 
 <script type='text/javascript'>
@@ -24,6 +25,23 @@
 </style>
 
 <div id="wrapper">
+@*@if (Model != null)
+{
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var priceUpdate = function () {
+            var value = @Model.GetCalculatedPricePLN();
+
+            $("#price").text("Cena: " + value + " PLN")
+        }
+
+        $("#orderform input").on("change paste keyup", priceUpdate);
+        $("#FrameWidth").change(priceUpdate);
+        $("#MirrorType").change(priceUpdate);
+    });
+</script>
+}*@
+
     <section id="welcome">
         <a href="#offer" class="btn btn-outline-light btn-lg">@_localizer["Check our offer"]</a>
     </section>
@@ -117,20 +135,21 @@
                 <option value="0">6 cm</option>
                 <option value="1">8 cm</option>
             </select>
+            @*<p id="price" class="font-weight-bold">0.00 PLN</p>*@
             <h4>@_localizer["Shipment info"]:</h4>
             <input class="border-info form-control-lg" type="text" asp-for="@Model.FirstName" placeholder="@_localizer["First name"]" />
             <span asp-validation-for="@Model.FirstName" class="text-danger"></span><br />
-            <input class="border-info form-control-lg"type="text" asp-for="@Model.LastName" placeholder="@_localizer["Last name"]" />
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.LastName" placeholder="@_localizer["Last name"]" />
             <span asp-validation-for="@Model.LastName" class="text-danger"></span><br />
-            <input class="border-info form-control-lg"type="text" asp-for="@Model.StreetAndNumber" placeholder="@_localizer["Street and number"]" />
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.StreetAndNumber" placeholder="@_localizer["Street and number"]" />
             <span asp-validation-for="@Model.StreetAndNumber" class="text-danger"></span><br />
-            <input class="border-info form-control-lg"type="text" asp-for="@Model.PostalCode" placeholder="@_localizer["Postal code"]" />
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.PostalCode" placeholder="@_localizer["Postal code"]" />
             <span asp-validation-for="@Model.PostalCode" class="text-danger"></span><br />
-            <input class="border-info form-control-lg"type="text" asp-for="@Model.City" placeholder="@_localizer["City"]" />
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.City" placeholder="@_localizer["City"]" />
             <span asp-validation-for="@Model.City" class="text-danger"></span><br />
-            <input class="border-info form-control-lg"type="text" asp-for="@Model.PhoneNumber" placeholder="@_localizer["Phone number"]" />
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.PhoneNumber" placeholder="@_localizer["Phone number"]" />
             <span asp-validation-for="@Model.PhoneNumber" class="text-danger"></span><br />
-            <input class="border-info form-control-lg"type="text" asp-for="@Model.EmailAddress" placeholder="@_localizer["Email Address"]" />
+            <input class="border-info form-control-lg" type="text" asp-for="@Model.EmailAddress" placeholder="@_localizer["Email Address"]" />
             <span asp-validation-for="@Model.EmailAddress" class="text-danger"></span><br />
             <select class="mr-2 form-control-lg" asp-for="@Model.ShipmentType" data-val="true" data-val-required="@_localizer["The shipment type field is required"]">
                 <option value="0">@_localizer["Prepaid"] 30 zł</option>
