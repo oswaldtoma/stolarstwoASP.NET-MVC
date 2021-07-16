@@ -8,8 +8,12 @@
     ViewData["Title"] = _localizer["Manage orders"];
 }
 
-<input type="checkbox" class="btn orderstable" asp-for="@Model.EmailNotifications"/>
-<label class="orderstable" asp-for="@Model.EmailNotifications">@_localizer["Send me email notifications"]</label>
+<form method="post" asp-action="SaveSettings">
+    <input type="checkbox" class="btn orderstable" asp-for="@Model.EmailNotifications" />
+    <label class="orderstable" asp-for="@Model.EmailNotifications">@_localizer["Send me email notifications"]</label>
+    <input type="text" class="orderstable" placeholder="@_localizer["Destination email"]" asp-for="@Model.NotifEmailAddress" />
+    <button type="submit" class="orderstable btn btn-primary">@_localizer["Save settings"]</button>
+</form>
 <br />
 
 @if (!Model.FormModels.Any())
@@ -18,42 +22,42 @@
 }
 else
 {
-<table cellpadding="5" class="orderstable table-responsive table-hover table-bordered text-center">
-    <tr>
-        <th>@_localizer["Mirror type"]</th>
-        <th>@_localizer["Height"]</th>
-        <th>@_localizer["Width"]</th>
-        <th>@_localizer["Frame width"]</th>
-        <th>@_localizer["Color choice"]</th>
-        <th>@_localizer["First name"]</th>
-        <th>@_localizer["Last name"]</th>
-        <th>@_localizer["Street and number"]</th>
-        <th>@_localizer["Postal code"]</th>
-        <th>@_localizer["City"]</th>
-        <th>@_localizer["Phone number"]</th>
-        <th>@_localizer["Email address"]</th>
-        <th>@_localizer["Shipment type"]</th>
-        <th>@_localizer["Calculated price"]</th>
-    </tr>
-    @for (int i = 0; i < Model.FormModels.Count; i++)
-    {
-        FormModel order = Model.FormModels[i];
+    <table cellpadding="5" class="orderstable table-responsive table-hover table-bordered text-center">
         <tr>
-            <td>@order.MirrorType.GetDisplayName()</td>
-            <td>@order.Height</td>
-            <td>@order.Width</td>
-            <td>@order.FrameWidth.GetDisplayName()</td>
-            <td>@order.ColorChoice.GetDisplayName()</td>
-            <td>@order.FirstName</td>
-            <td>@order.LastName</td>
-            <td>@order.StreetAndNumber</td>
-            <td>@order.PostalCode</td>
-            <td>@order.City</td>
-            <td>@order.PhoneNumber</td>
-            <td>@order.EmailAddress</td>
-            <td>@order.ShipmentType.GetDisplayName()</td>
-            <td>@order.GetCalculatedPricePLN() zł</td>
+            <th>@_localizer["Mirror type"]</th>
+            <th>@_localizer["Height"]</th>
+            <th>@_localizer["Width"]</th>
+            <th>@_localizer["Frame width"]</th>
+            <th>@_localizer["Color choice"]</th>
+            <th>@_localizer["First name"]</th>
+            <th>@_localizer["Last name"]</th>
+            <th>@_localizer["Street and number"]</th>
+            <th>@_localizer["Postal code"]</th>
+            <th>@_localizer["City"]</th>
+            <th>@_localizer["Phone number"]</th>
+            <th>@_localizer["Email address"]</th>
+            <th>@_localizer["Shipment type"]</th>
+            <th>@_localizer["Calculated price"]</th>
         </tr>
-    }
-</table>
+        @for (int i = 0; i < Model.FormModels.Count; i++)
+        {
+            FormModel order = Model.FormModels[i];
+            <tr>
+                <td>@order.MirrorType.GetDisplayName()</td>
+                <td>@order.Height</td>
+                <td>@order.Width</td>
+                <td>@order.FrameWidth.GetDisplayName()</td>
+                <td>@order.ColorChoice.GetDisplayName()</td>
+                <td>@order.FirstName</td>
+                <td>@order.LastName</td>
+                <td>@order.StreetAndNumber</td>
+                <td>@order.PostalCode</td>
+                <td>@order.City</td>
+                <td>@order.PhoneNumber</td>
+                <td>@order.EmailAddress</td>
+                <td>@order.ShipmentType.GetDisplayName()</td>
+                <td>@order.GetCalculatedPricePLN() zł</td>
+            </tr>
+        }
+    </table>
 }

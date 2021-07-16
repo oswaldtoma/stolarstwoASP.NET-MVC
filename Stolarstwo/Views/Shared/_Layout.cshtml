@@ -10,6 +10,12 @@
     <title>@ViewData["Title"] - Stolarstwo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </head>
 <body>
     <header>
@@ -31,13 +37,13 @@
                     </ul>
                     <ul id="links" class="navbar-nav flex-grow-1">
                         <li class"nav-item">
-                            <a class="nav-link text-dark" href="./#offer">@_localizer["Offer"]</a>
+                            <a class="nav-link text-dark" href="/#offer">@_localizer["Offer"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="./#contact">@_localizer["Contact"]</a>
+                            <a class="nav-link text-dark" href="/#contact">@_localizer["Contact"]</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="./#order">@_localizer["Order"]</a>
+                            <a class="nav-link text-dark" href="/#order">@_localizer["Order"]</a>
                         </li>
                     </ul>
                 </div>
@@ -56,11 +62,5 @@
             <partial name="_LoginPartial" />
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
